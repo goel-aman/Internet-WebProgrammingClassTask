@@ -1,0 +1,42 @@
+
+/* a.Change the color of at least two elements */
+
+#heading-neighbour{
+    color: orange;
+}
+
+#happyImage{
+    color:aqua;
+}
+
+/* b.Change the font properties (family, size, weight, or style) of at least two
+elements. Some standard fonts: Arial, Arial Black, Verdana, Trebuchet MS,
+Georgia, Tahoma, Courier New, Times New Roman */
+
+#favouriteHeading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: 900;
+    font-style: italic;
+}
+
+#skill{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: 600;
+    font-style: oblique;
+}
+
+/* c. Change the background color, text alignment and borders */
+
+body{
+    background-color: azure;
+}
+
+p{
+    text-align:justify;
+}
+
+#spanish{
+    border-style:double;
+}
