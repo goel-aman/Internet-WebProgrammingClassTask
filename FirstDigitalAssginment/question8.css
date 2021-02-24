@@ -1,0 +1,47 @@
+#first{
+    /* width: 100%; */
+    border: 1px solid red;
+    margin:2px;
+    background-image: url("background1.jpg");
+    padding: 20px;
+}
+
+#second{
+    width: 46%;
+    border: 1px solid blue;
+    float: left;
+    padding: 20px;
+    margin:2px;
+    background-color: lightyellow;
+}
+
+#content{
+    color: black;
+    font-size: large;
+    font-weight: 800;
+}
+
+li:hover{
+    color: red;
+    font-weight: 800;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#heading{
+    color:white;
+}
+
+#third{
+    width: 47%;
+    border: 1px solid black;
+    float: left;
+    padding: 20px;
+    margin: 2px;
+}
+
+#parent{
+    padding: 20px;
+    border: 2px solid black;
+    height: 600px;
+}

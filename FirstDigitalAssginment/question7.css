@@ -1,0 +1,35 @@
+.nav {
+    display: inline;
+    background-color: black;
+    color:white;
+    padding:5px;
+    margin-right:3px;
+    word-spacing: 2px;
+}
+
+body{
+    background-color: gray;
+}
+
+#content{
+    background-color: white;
+    padding:20px;
+    margin: 10%;
+    margin-top:2%;
+}
+
+#numberdiv{
+    display: inline-block;
+    background-color: green;
+    color:white;
+    font-size: 60px;
+    padding: 20px;
+    position: relative;
+    bottom:140px;
+}
+
+#setposition{
+    position: relative;
+    left: 205px;
+    bottom: 250px;
+}

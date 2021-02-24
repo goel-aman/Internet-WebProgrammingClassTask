@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Image to use: </p>
+
+    <img src="dog.jpg" id="scream" alt="image of a dog" width="200" height="200">
+
+    <p>Canvas : </p>
+    <canvas id="myCanvas" width="250" height="190" 
+        style = "border:  1px solid #d3d3d3;">
+    </canvas>
+
+    <h3>Question : Add a video in one of your page</h3>
+<h4>Using video tag</h4>
+    <video width="400" controls>
+        <source src="SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+    </video>
+
+    <h4>Using Embed Tag</h4>
+    <embed src="file_example_MP4_640_3MG.mp4" type="video/webm" width="400" height="300">
+    
+    
+    <h4>Using Object Tag</h4>
+    <object data="small.mp4" width="400" height="300"></object>
+    
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var img = document.getElementById("scream");
+            ctx.drawImage(img,10,10);
+        }
+    </script>
+
+</body>
+</html>
