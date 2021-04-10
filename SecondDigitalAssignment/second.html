@@ -1,0 +1,44 @@
+<!-- Complete the following function called count that takes an array of integers and the 
+size of the array, and return the number of items in the array that is greater than 13 
+and less than 29. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function count(w){
+            var siz = w.length;
+            var ans = 0;
+            for(var i = 0; i < w.length;i++){
+                if(w[i] < 29 && w[i] > 13){
+                    ans++;
+                }
+            }
+            document.getElementById("answer").innerHTML = ans;
+        }
+
+        function getAnswer(){
+            var inputString = document.getElementById("inputArray").value;
+            var array = inputString.split(" ");
+            for(var i = 0;i < array.length;i++){
+                array[i] = parseInt(array[i]); 
+            }
+            count(array);
+        }
+    </script>
+</head>
+<body>
+    <label for="inputArray">Please Enter all the elements seperated by space </label>
+    <br><br>
+    <input type="text" name="elements" id="inputArray">
+    <br><br>
+    <button onclick="getAnswer()">Click Me</button>
+    <br><br>
+    <div>Number of items in the array that is greater than 13 and less than 29 is : <span id="answer"></span></div>
+</body>
+</html>

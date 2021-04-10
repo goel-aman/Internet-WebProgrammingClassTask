@@ -1,0 +1,36 @@
+<!-- Write a script to take three numbers from the user and display the greatest number out of three. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculateLargest(){
+            var first = document.getElementById("firstinput").value;
+            var second = document.getElementById("secondinput").value;
+            var third = document.getElementById("thirdinput").value;
+            var answer = Math.max(first,Math.max(second,third));
+            document.getElementById("answer").innerHTML = answer;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- <form onsubmit="calculateLargest()"> -->
+        <label for="firstinput">Enter the first Number</label>
+        <input type="number" id="firstinput" name="firstNumber">
+        <br><br>
+        <label for="secondinput">Enter the second number</label>
+        <input type="number" id="secondinput" name="secondNumber">
+        <br><br>
+        <label for="thirdinput">Enter the Third number</label>
+        <input type="number" id = "thirdinput" name="thirdNumber">
+        <button onclick="calculateLargest()">Click Me</button>
+    <!-- </form> -->
+
+    <p>Therefore the largest among all three number is : <span id="answer"></span></p>
+</body>
+</html>
