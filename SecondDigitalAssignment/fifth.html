@@ -1,0 +1,60 @@
+<!-- Develop an Online Greetings Designer using Javascript and CSS. Add options to
+i) change the image
+ii) Position the image (left, background, right)
+iii) Edit text
+iv) Change font size
+v) Change font color -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Online Greetings Designer</h1>
+    <img src="first.jpg" alt="" id="myImage">
+    <p id="textvalue">the image is very beautiful</p>
+    <button onclick="changeImage()">Change Current Image</button>
+    <button onclick="leftImage()">Left Image</button>
+    <button onclick="backgroundImage()">Background Image</button>
+    <button onclick="rightImage()">Right Image</button>
+
+    <button onclick="editText()">Edit Text</button>
+    <button onclick="changeFontSize()">Change Font Size</button>
+    <button onclick="ChangeFontColor()">Change Font Color</button>
+    <script>
+        function changeImage(){
+            document.getElementById("myImage").src = 'third.jpg';
+        }
+
+        function leftImage(){
+            console.log("hello");
+            document.getElementById("myImage").style.marginRight = 10 + "px";
+        }
+
+        function backgroundImage(){
+            document.body.style.backgroundImage = "url('first.jpg')";
+        }
+
+        function rightImage(){
+            document.getElementById("myImage").style.marginLeft = 800 + "px";
+        }
+
+        function editText(){
+            document.getElementById("textvalue").innerHTML = "the world is very beautiful .......";
+        }
+
+        function changeFontSize(){
+            document.getElementById("textvalue").style.fontSize = 50 + "px";
+        }
+
+        function ChangeFontColor(){
+            document.getElementById("textvalue").style.color = "blue";
+        }
+    </script>
+</body>
+</html>

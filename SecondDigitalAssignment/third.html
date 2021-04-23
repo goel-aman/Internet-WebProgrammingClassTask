@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        var costt;
+        function myFunc(){
+            var totalMiles = parseInt(document.getElementById("miles").value);
+            var CostPerGallon = parseInt(document.getElementById("costOfgallons").value);
+            var gasConsumption = parseInt(document.getElementById("consumption").value);
+        
+            var totalNumberOfConsumedGallons = totalMiles / gasConsumption;
+            var cost = totalNumberOfConsumedGallons * CostPerGallon;
+            costt = cost;
+            calledMe();
+        }
+    </script>
 </head>
 
 <body>
@@ -22,7 +35,18 @@ output should be displayed using document.writeln -->
     <input type="number" name="inputCost" id="costOfgallons">
     <br><br>
     <label for="consumption">Car gas consumption (miles per gallon) and then determines the cost of a specific trip.</label>
+    <br><br>
     <input type="number" name="inputConsumption" id="consumption">
+    <br><br>
+    
+    <button onclick="myFunc()">Click Me</button>
+    <script>
+        function calledMe(){
+            document.writeln("<p> Therefore total cost is : ",costt,"</p>")
+            document.writeln("<p> Therefore total cost is : ",costt,"</p>");
+        }
+    </script>
+
 </body>
 
 </html>

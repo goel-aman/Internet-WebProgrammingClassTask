@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Scrambled Word Game</h2>
+    
+
+    <br>
+    <br>
+
+    <h4>Decode the word : </h4>
+    <div id="randomWord"></div>
+
+    <h5>Enter the word after decoding it</h5>
+    <input type="text" id="inputValue">
+
+    <button onclick="computeAnswer()">Compute Result</button>
+
+    <script>
+        var words = ["india","Book","newYork","English","Vacine","coronavirus"];
+        var index = parseInt(Math.random() * words.length);
+        console.log(index);
+        document.getElementById("randomWord").innerHTML = words[index].split('').sort().join('');
+        console.log("hello");
+        function computeAnswer(){
+            var inputValue = document.getElementById("inputValue").value;
+            if(inputValue == words[index]){
+                alert("Correct Answer");
+            }else{
+                alert("Wrong Answer");
+            }
+        }
+    </script>
+</body>
+
+
+</html>

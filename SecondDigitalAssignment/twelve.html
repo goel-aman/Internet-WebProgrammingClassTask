@@ -1,0 +1,65 @@
+<!-- Develop a JavaScript program that will determine whether a department-store
+customer has exceeded the credit limit on a charge account. For each customer, the
+following facts are available:
+a) Account number
+b) Balance at the beginning of the month
+c) Total of all items charged by this customer this month
+d) Total of all credits applied to this customer's account this month
+e) Allowed credit limit
+The program should input each of these facts from a prompt dialog as an integer,
+calculate the new balance (= beginning balance + charges – credits), display the new
+balance and determine whether the new balance exceeds the customer's credit limit.
+For customers whose credit limit is exceeded, the program should output HTML text
+that displays the message ―Credit limit exceeded. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function newBalance(){
+            var beginingBalance = document.getElementById("balance").value;
+            var charges = document.getElementById("totalCost").value;
+            var credits = document.getElementById("totalcreditApplied").value;
+            var creditLimit = document.getElementById("creditLimit").value;
+            var newBalance = beginingBalance + charges - credits;
+
+            if(newBalance > creditLimit){
+                document.getElementById("output").innerHTML = "Credit limit Exceed";
+            }else{
+                document.getElementById("output").innerHTML = "New Balance is : " + newBalance;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Departmental Store Management System</h2>
+    <label for="accountNumber">Account Number</label>
+    <br>
+    <input type="number" id="accountNumber">
+    <br><br>
+    <label for="balance">Balance at the begining of the month</label>
+    <br>
+    <input type="text" id="balance">
+    <br><br>
+    <label for="totalCost">Total of all items charged by this customer this month</label>
+    <br>
+    <input type="number" id="totalCost">
+    <br><br>
+    <label for="totalcreditApplied">Total of all credits applied to this customer's account this month</label>
+    <br>
+    <input type="number" id="totalcreditApplied">
+    <br><br>
+    <label for="creditLimit">Allowed Credit Limit</label>
+    <br>
+    <input type="number" id="creditLimit">
+    <button onclick="newBalance()">Click Me</button>
+    <div id="output"></div>
+</body>
+
+</html>

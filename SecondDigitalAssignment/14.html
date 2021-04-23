@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript form validation - checking non-empty</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="mail">
+        <h2>Validate Credit Cards</h2>
+        <input type='text' name='text1' id="firstinput">
+
+        <label for="card">Choose a credit Card:</label>
+        <select id="card" name="card">
+            <option value="American">American Express</option>
+            <option value="Diners">Diners</option>
+            <option value="Discover">Discover
+            </option>
+            <option value="JCB">JCB</option>
+            <option value="MasterCard">Master Card</option>
+            <option value="Visa">Visa</option>
+        </select>
+        <button onclick="DecideCompany()"> Click Me</button>
+
+
+    </div>
+    <script>
+        function DecideCompany() {
+            inputtxt = document.getElementById("firstinput").value;
+            console.log(inputtxt);
+            company = document.getElementById("card").value;
+            console.log(company);
+            console.log("Inside Decide company :  ", inputtxt, " company name : ", company);
+            if (company == "American") {
+                return AmericanExpress(inputtxt);
+            }
+
+            if (company == "Diners") {
+                return DinersClub(inputtxt);
+            }
+
+            if (company == "Discover") {
+                return DiscoverCard(inputtxt);
+            }
+
+            if (company == "JCB") {
+                return JCB(inputtxt);
+            }
+
+            if (company == "MasterCard") {
+                return MasterCard(inputtxt);
+            }
+
+            if (company == "Visa") {
+                return Visa(inputtxt);
+            }
+        }
+
+        function Visa(inputtxt) {
+            var cardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+            if (inputtxt.match(cardno)) {
+                alert("Valid Visa Credit Card Number");
+                return;
+            }
+            else {
+                alert("Not a valid Visa credit card number!");
+                return;
+            }
+        }
+        function AmericanExpress(inputtxt) {
+            console.log("hello from america");
+            var cardno = /^(?:3[47][0-9]{13})$/;
+            if (inputtxt.match(cardno)) {
+                alert("Valid American Express Card");
+                return;
+            }
+            else {
+                alert("Not a valid Amercican Express credit card number!");
+                return;
+            }
+        }
+
+        function MasterCard(inputtxt) {
+            var cardno = /^(?:5[1-5][0-9]{14})$/;
+            if (inputtxt.match(cardno)) {
+                alert("valid Mastercard number");
+                return;
+            }
+            else {
+                alert("Not a valid Mastercard number!");
+                return;
+            }
+        }
+        function DiscoverCard(inputtxt) {
+            var cardno = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
+            if (inputtxt.match(cardno)) {
+                alert("valid Discover card number");
+                return;
+            }
+            else {
+                alert("Not a valid Discover card number!");
+                return;
+            }
+        }
+
+        function DinersClub(inputtxt) {
+            var cardno = /^(?:3(?:0[0-5]|[68][0-9])[0-9]{11})$/;
+            if (inputtxt.match(cardno)) {
+                alert("valid Dinners Club card number");
+                return;
+            }
+            else {
+                alert("Not a valid Dinners Club card number!");
+                return;
+            }
+        }
+
+        function JCB(inputtxt) {
+            var cardno = /^(?:(?:2131|1800|35\d{3})\d{11})$/;
+            if (inputtxt.match(cardno)) {
+                alert("valid JCB card number");
+                return;
+            }
+            else {
+                alert("Not a valid JCB card number!");
+                return;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
